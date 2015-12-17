@@ -1,0 +1,698 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B1A398D-6E4F-4E71-87CF-7FBA8E4AAFB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Configuration</RootNamespace>
+    <AssemblyName>Configuration</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ArtificialHorizon">
+      <HintPath>..\Libs\ArtificialHorizon.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PSTaskDialog">
+      <HintPath>..\Libs\PSTaskDialog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GluonCS\Properties\Settings.Designer.cs">
+      <Link>GluonCS\Settings.Designer.cs</Link>
+    </Compile>
+    <Compile Include="AskHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AskHome.Designer.cs">
+      <DependentUpon>AskHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common.cs" />
+    <Compile Include="ConfigurationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationControl.Designer.cs">
+      <DependentUpon>ConfigurationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationTabpage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationTabpage.Designer.cs">
+      <DependentUpon>ConfigurationTabpage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModel.cs" />
+    <Compile Include="CoordinateEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CoordinateEdit.Designer.cs">
+      <DependentUpon>CoordinateEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datalogging.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Datalogging.Designer.cs">
+      <DependentUpon>Datalogging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DistanceTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DistanceTextBox.Designer.cs">
+      <DependentUpon>DistanceTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GluonConfigEasy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GluonConfigEasy.Designer.cs">
+      <DependentUpon>GluonConfigEasy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\BattAlarm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\BattAlarm.Designer.cs">
+      <DependentUpon>BattAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\Block.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\Block.Designer.cs">
+      <DependentUpon>Block.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\Call.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\Call.Designer.cs">
+      <DependentUpon>Call.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\Circle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\Circle.Designer.cs">
+      <DependentUpon>Circle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\CircleAbs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\CircleAbs.Designer.cs">
+      <DependentUpon>CircleAbs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\CircleRel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\CircleRel.Designer.cs">
+      <DependentUpon>CircleRel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\CircleTo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\CircleTo.Designer.cs">
+      <DependentUpon>CircleTo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\CircleToAbs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\CircleToAbs.Designer.cs">
+      <DependentUpon>CircleToAbs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\CircleToRel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\CircleToRel.Designer.cs">
+      <DependentUpon>CircleToRel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\Climb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\Climb.Designer.cs">
+      <DependentUpon>Climb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\FlareTo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\FlareTo.designer.cs">
+      <DependentUpon>FlareTo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\FlareToAbs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\FlareToAbs.designer.cs">
+      <DependentUpon>FlareToAbs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\FlareToRel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\FlareToRel.designer.cs">
+      <DependentUpon>FlareToRel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\FlightplanSwitch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\FlightplanSwitch.Designer.cs">
+      <DependentUpon>FlightplanSwitch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\GlideTo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\GlideTo.Designer.cs">
+      <DependentUpon>GlideTo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\GlideToAbs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\GlideToAbs.Designer.cs">
+      <DependentUpon>GlideToAbs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\GlideToRel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\GlideToRel.Designer.cs">
+      <DependentUpon>GlideToRel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\Global.cs" />
+    <Compile Include="NavigationCommands\FlyTo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\FlyTo.Designer.cs">
+      <DependentUpon>FlyTo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\FromTo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\FromTo.Designer.cs">
+      <DependentUpon>FromTo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\If.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\If.Designer.cs">
+      <DependentUpon>If.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\IfSm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\IfSm.Designer.cs">
+      <DependentUpon>IfSm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\IfNe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\IfNe.Designer.cs">
+      <DependentUpon>IfNe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\IfGr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\IfGr.Designer.cs">
+      <DependentUpon>IfGr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\IfEq.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\IfEq.Designer.cs">
+      <DependentUpon>IfEq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\Empty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\Empty.Designer.cs">
+      <DependentUpon>Empty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\FlyToAbs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\FlyToAbs.Designer.cs">
+      <DependentUpon>FlyToAbs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\FlyToRel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\FlyToRel.Designer.cs">
+      <DependentUpon>FlyToRel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\FromToAbs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\FromToAbs.Designer.cs">
+      <DependentUpon>FromToAbs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\FromToRel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\FromToRel.Designer.cs">
+      <DependentUpon>FromToRel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\Goto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\Goto.Designer.cs">
+      <DependentUpon>Goto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\INavigationCommandViewer.cs" />
+    <Compile Include="NavigationCommands\LoiterCircle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\LoiterCircle.Designer.cs">
+      <DependentUpon>LoiterCircle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\NavigationCommandEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\NavigationCommandEditor.Designer.cs">
+      <DependentUpon>NavigationCommandEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\Return.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\Return.Designer.cs">
+      <DependentUpon>Return.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\ServoSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\ServoSet.Designer.cs">
+      <DependentUpon>ServoSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\ServoStartTrigger.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\ServoStartTrigger.Designer.cs">
+      <DependentUpon>ServoStartTrigger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\ServoStopTrigger.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\ServoStopTrigger.Designer.cs">
+      <DependentUpon>ServoStopTrigger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\ServoTrigger.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\ServoTrigger.Designer.cs">
+      <DependentUpon>ServoTrigger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\SetLoiterPosition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\SetLoiterPosition.Designer.cs">
+      <DependentUpon>SetLoiterPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\SetMaximumRange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\SetMaximumRange.Designer.cs">
+      <DependentUpon>SetMaximumRange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\Until.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\Until.Designer.cs">
+      <DependentUpon>Until.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\UntilEq.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\UntilEq.Designer.cs">
+      <DependentUpon>UntilEq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\UntilGr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\UntilGr.Designer.cs">
+      <DependentUpon>UntilGr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\UntilNe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\UntilNe.Designer.cs">
+      <DependentUpon>UntilNe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationCommands\UntilSm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationCommands\UntilSm.Designer.cs">
+      <DependentUpon>UntilSm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationInstructionEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NavigationInstructionEdit.Designer.cs">
+      <DependentUpon>NavigationInstructionEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationListView.Designer.cs">
+      <DependentUpon>NavigationListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OrientedTextLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OsdConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OsdConfig.Designer.cs">
+      <DependentUpon>OsdConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PidControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PidControl.Designer.cs">
+      <DependentUpon>PidControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PidModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReadConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReadConfiguration.Designer.cs">
+      <DependentUpon>ReadConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpeedTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SpeedTextBox.Designer.cs">
+      <DependentUpon>SpeedTextBox.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AskHome.resx">
+      <DependentUpon>AskHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationControl.de.resx">
+      <DependentUpon>ConfigurationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationControl.nl.resx">
+      <DependentUpon>ConfigurationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationControl.resx">
+      <DependentUpon>ConfigurationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationControl.vi.resx">
+      <DependentUpon>ConfigurationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationTabpage.de.resx">
+      <DependentUpon>ConfigurationTabpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationTabpage.nl.resx">
+      <DependentUpon>ConfigurationTabpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationTabpage.resx">
+      <DependentUpon>ConfigurationTabpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationTabpage.vi.resx">
+      <DependentUpon>ConfigurationTabpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoordinateEdit.resx">
+      <DependentUpon>CoordinateEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Datalogging.resx">
+      <DependentUpon>Datalogging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DistanceTextBox.resx">
+      <DependentUpon>DistanceTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GluonConfigEasy.resx">
+      <DependentUpon>GluonConfigEasy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\BattAlarm.resx">
+      <DependentUpon>BattAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\Block.resx">
+      <DependentUpon>Block.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\Call.resx">
+      <DependentUpon>Call.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\Circle.resx">
+      <DependentUpon>Circle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\CircleAbs.resx">
+      <DependentUpon>CircleAbs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\CircleRel.resx">
+      <DependentUpon>CircleRel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\CircleTo.resx">
+      <DependentUpon>CircleTo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\CircleToAbs.resx">
+      <DependentUpon>CircleToAbs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\CircleToRel.resx">
+      <DependentUpon>CircleToRel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\Climb.resx">
+      <DependentUpon>Climb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\FlareTo.resx">
+      <DependentUpon>FlareTo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\FlareToAbs.resx" />
+    <EmbeddedResource Include="NavigationCommands\FlareToRel.resx" />
+    <EmbeddedResource Include="NavigationCommands\FlightplanSwitch.resx">
+      <DependentUpon>FlightplanSwitch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\FlyTo.resx">
+      <DependentUpon>FlyTo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\FromTo.resx">
+      <DependentUpon>FromTo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\GlideTo.resx">
+      <DependentUpon>GlideTo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\GlideToAbs.resx">
+      <DependentUpon>GlideToAbs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\GlideToRel.resx">
+      <DependentUpon>GlideToRel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\If.resx">
+      <DependentUpon>If.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\IfSm.resx">
+      <DependentUpon>IfSm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\IfNe.resx">
+      <DependentUpon>IfNe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\IfGr.resx">
+      <DependentUpon>IfGr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\IfEq.resx">
+      <DependentUpon>IfEq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\Empty.resx">
+      <DependentUpon>Empty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\FlyToAbs.resx">
+      <DependentUpon>FlyToAbs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\FlyToRel.resx">
+      <DependentUpon>FlyToRel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\FromToAbs.resx">
+      <DependentUpon>FromToAbs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\FromToRel.resx">
+      <DependentUpon>FromToRel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\Goto.resx">
+      <DependentUpon>Goto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\LoiterCircle.resx">
+      <DependentUpon>LoiterCircle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\NavigationCommandEditor.resx">
+      <DependentUpon>NavigationCommandEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\Return.resx">
+      <DependentUpon>Return.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\ServoSet.resx">
+      <DependentUpon>ServoSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\ServoStartTrigger.resx">
+      <DependentUpon>ServoStartTrigger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\ServoStopTrigger.resx">
+      <DependentUpon>ServoStopTrigger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\ServoTrigger.resx">
+      <DependentUpon>ServoTrigger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\SetLoiterPosition.resx">
+      <DependentUpon>SetLoiterPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\SetMaximumRange.resx">
+      <DependentUpon>SetMaximumRange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\Until.resx">
+      <DependentUpon>Until.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\UntilEq.resx">
+      <DependentUpon>UntilEq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\UntilGr.resx">
+      <DependentUpon>UntilGr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\UntilNe.resx">
+      <DependentUpon>UntilNe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationCommands\UntilSm.resx">
+      <DependentUpon>UntilSm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationInstructionEdit.resx">
+      <DependentUpon>NavigationInstructionEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationListView.resx">
+      <DependentUpon>NavigationListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OsdConfig.resx">
+      <DependentUpon>OsdConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PidControl.resx">
+      <DependentUpon>PidControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReadConfiguration.resx">
+      <DependentUpon>ReadConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpeedTextBox.resx">
+      <DependentUpon>SpeedTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kml\Kml.csproj">
+      <Project>{3F7BDAB7-2F07-4D0B-A517-42E6DE6C70DB}</Project>
+      <Name>Kml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SerialCommunication\Communication.csproj">
+      <Project>{D4C21631-D662-4C79-8047-1BB72967B3B1}</Project>
+      <Name>Communication</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

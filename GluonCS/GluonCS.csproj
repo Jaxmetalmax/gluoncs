@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48807878-239B-483A-BDA8-39D3D6B2C18C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GluonCS</RootNamespace>
+    <AssemblyName>GluonCS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Mobile-Maps.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>GluonCS.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Artificial3DHorizon">
+      <HintPath>..\Libs\Artificial3DHorizon.dll</HintPath>
+    </Reference>
+    <Reference Include="ArtificialHorizon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\ArtificialHorizon.dll</HintPath>
+    </Reference>
+    <Reference Include="BSE.Windows.Forms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\BSE.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="D3DControls">
+      <HintPath>..\Libs\D3DControls.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=1.5.4.3, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SmartThreadPool, Version=1.0.2235.39078, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\SmartThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\Libs\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="ZedGraph">
+      <HintPath>..\Libs\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GluonCSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GluonCSForm.Designer.cs">
+      <DependentUpon>GluonCSForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GluonCSFormSwallow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GluonCSFormSwallow.designer.cs">
+      <DependentUpon>GluonCSFormSwallow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inputbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inputbox.Designer.cs">
+      <DependentUpon>Inputbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiveUavLayer\ConnectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LiveUavLayer\ConnectForm.Designer.cs">
+      <DependentUpon>ConnectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiveUavLayer\GMapController.cs" />
+    <Compile Include="LiveUavLayer\GMapControlWithScale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LiveUavLayer\LiveUavModel.cs" />
+    <Compile Include="LiveUavLayer\LiveUavNavigationModel.cs" />
+    <Compile Include="LiveUavLayer\LiveUavPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LiveUavLayer\LiveUavPanel.Designer.cs">
+      <DependentUpon>LiveUavPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiveUavLayer\LiveUavPanelSwallow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LiveUavLayer\LiveUavPanelSwallow.designer.cs">
+      <DependentUpon>LiveUavPanelSwallow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiveUavLayer\NavigationOverview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LiveUavLayer\NavigationOverview.Designer.cs">
+      <DependentUpon>NavigationOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiveUavLayer\ReadNavigationCommandsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LiveUavLayer\ReadNavigationCommandsWindow.Designer.cs">
+      <DependentUpon>ReadNavigationCommandsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiveUavLayer\UavSpeech.cs" />
+    <Compile Include="LiveUavLayer\WinFormStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WinFormStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LiveUavLayer\Survey.cs" />
+    <Compile Include="LiveUavLayer\SurveyAngle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LiveUavLayer\SurveyAngle.Designer.cs">
+      <DependentUpon>SurveyAngle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiveUavLayer\SurveyProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LiveUavLayer\SurveyProperties.Designer.cs">
+      <DependentUpon>SurveyProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiveUavLayer\UavPropertiesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LiveUavLayer\UavPropertiesControl.Designer.cs">
+      <DependentUpon>UavPropertiesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiveUavLayer\UavPropertiesModel.cs" />
+    <Compile Include="LiveUavLayer\WindGMapControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LiveUavLayer\WriteNavigationCommandsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LiveUavLayer\WriteNavigationCommandsWindow.Designer.cs">
+      <DependentUpon>WriteNavigationCommandsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Markers\AbsoluteMarker.cs" />
+    <Compile Include="Markers\GluonHomeMarker.cs" />
+    <Compile Include="Markers\IconMarker.cs" />
+    <Compile Include="Markers\MoveableMarker.cs" />
+    <Compile Include="Markers\NavigationMarker.cs" />
+    <Compile Include="Markers\RelativeCircleMarker.cs" />
+    <Compile Include="Markers\RelativeMarker.cs" />
+    <Compile Include="Markers\UavMarker.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgressBarColored.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReplayControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReplayControl.Designer.cs">
+      <DependentUpon>ReplayControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup.Designer.cs">
+      <DependentUpon>Setup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransparentLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="GluonCSForm.de.resx">
+      <DependentUpon>GluonCSForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GluonCSForm.nl.resx">
+      <DependentUpon>GluonCSForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GluonCSForm.resx">
+      <DependentUpon>GluonCSForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GluonCSForm.vi.resx">
+      <DependentUpon>GluonCSForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GluonCSFormSwallow.resx">
+      <DependentUpon>GluonCSFormSwallow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inputbox.resx">
+      <DependentUpon>Inputbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\ConnectForm.de.resx">
+      <DependentUpon>ConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\ConnectForm.en.resx">
+      <DependentUpon>ConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\ConnectForm.nl.resx">
+      <DependentUpon>ConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\ConnectForm.resx">
+      <DependentUpon>ConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\ConnectForm.vi.resx">
+      <DependentUpon>ConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\LiveUavPanel.de.resx">
+      <DependentUpon>LiveUavPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\LiveUavPanel.en.resx">
+      <DependentUpon>LiveUavPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\LiveUavPanel.nl.resx">
+      <DependentUpon>LiveUavPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\LiveUavPanel.resx">
+      <DependentUpon>LiveUavPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\LiveUavPanel.vi.resx">
+      <DependentUpon>LiveUavPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\LiveUavPanelSwallow.en.resx">
+      <DependentUpon>LiveUavPanelSwallow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\LiveUavPanelSwallow.resx">
+      <DependentUpon>LiveUavPanelSwallow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\NavigationOverview.resx">
+      <DependentUpon>NavigationOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\ReadNavigationCommandsWindow.resx">
+      <DependentUpon>ReadNavigationCommandsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\SurveyProperties.de.resx">
+      <DependentUpon>SurveyProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\SurveyProperties.nl.resx">
+      <DependentUpon>SurveyProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\SurveyProperties.vi.resx">
+      <DependentUpon>SurveyProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\WinFormStrings.de.resx" />
+    <EmbeddedResource Include="LiveUavLayer\WinFormStrings.nl.resx" />
+    <EmbeddedResource Include="LiveUavLayer\WinFormStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WinFormStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\SurveyAngle.resx">
+      <DependentUpon>SurveyAngle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\SurveyProperties.resx">
+      <DependentUpon>SurveyProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\UavPropertiesControl.resx">
+      <DependentUpon>UavPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveUavLayer\WinFormStrings.vi.resx" />
+    <EmbeddedResource Include="LiveUavLayer\WriteNavigationCommandsWindow.resx">
+      <DependentUpon>WriteNavigationCommandsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReplayControl.resx">
+      <DependentUpon>ReplayControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup.de.resx">
+      <DependentUpon>Setup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup.nl.resx">
+      <DependentUpon>Setup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup.resx">
+      <DependentUpon>Setup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup.vi.resx">
+      <DependentUpon>Setup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="..\models\easystar\easystar.x">
+      <Link>Models\Easystar\easystar.x</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\models\funjet\funjet.x">
+      <Link>Models\Funjet\funjet.x</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\models\mq-9 reaper\MQ-9 Reaper.x">
+      <Link>Models\Reaper\MQ-9 Reaper.x</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="app.config" />
+    <None Include="NavigationBlocks\auto-land.gnf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NavigationBlocks\default.gnf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NavigationBlocks\defaultcircle.gnf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NavigationBlocks\empty.gnf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NavigationBlocks\loiter.gnf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NavigationBlocks\standby.gnf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{F1A4A04A-9A2D-4F0D-B79D-3B033AF2CEF2}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Configuration\Configuration.csproj">
+      <Project>{2B1A398D-6E4F-4E71-87CF-7FBA8E4AAFB6}</Project>
+      <Name>Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlightgearCommunication\Simulation.csproj">
+      <Project>{47A74C61-DCDE-4035-9984-6D8070EFC5D2}</Project>
+      <Name>Simulation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gluonpilot\Gluonpilot.csproj">
+      <Project>{3D63D252-43DB-4076-8788-EEA5665D9DAC}</Project>
+      <Name>Gluonpilot</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kml\Kml.csproj">
+      <Project>{3F7BDAB7-2F07-4D0B-A517-42E6DE6C70DB}</Project>
+      <Name>Kml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SerialCommunication\Communication.csproj">
+      <Project>{D4C21631-D662-4C79-8047-1BB72967B3B1}</Project>
+      <Name>Communication</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-open-document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Documentation\de\block.html">
+      <Link>Documentation\de\block.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\de\circle.html">
+      <Link>Documentation\de\circle.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\de\climb.html">
+      <Link>Documentation\de\climb.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\de\emptycmd.html">
+      <Link>Documentation\de\emptycmd.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\de\flareto.html">
+      <Link>Documentation\de\flareto.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\de\flyto.html">
+      <Link>Documentation\de\flyto.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\de\flyto.png">
+      <Link>Documentation\de\flyto.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\de\fromto.html">
+      <Link>Documentation\de\fromto.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\de\fromto.png">
+      <Link>Documentation\de\fromto.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\de\glideto.html">
+      <Link>Documentation\de\glideto.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\de\goto.html">
+      <Link>Documentation\de\goto.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\de\if.html">
+      <Link>Documentation\de\if.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\de\until.html">
+      <Link>Documentation\de\until.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\block.html">
+      <Link>Documentation\en\block.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\call.html">
+      <Link>Documentation\en\call.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\circle.html">
+      <Link>Documentation\en\circle.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\circleto.html">
+      <Link>Documentation\en\circleto.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\climb.html">
+      <Link>Documentation\en\climb.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\emptycmd.html">
+      <Link>Documentation\en\emptycmd.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\flareto.html">
+      <Link>Documentation\en\flareto.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\flyto.html">
+      <Link>Documentation\en\flyto.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\flyto.png">
+      <Link>Documentation\en\flyto.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\fromto.html">
+      <Link>Documentation\en\fromto.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\fromto.png">
+      <Link>Documentation\en\fromto.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\glideto.html">
+      <Link>Documentation\en\glideto.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\goto.html">
+      <Link>Documentation\en\goto.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\if.html">
+      <Link>Documentation\en\if.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\loitercircle.html">
+      <Link>Documentation\en\loitercircle.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\return.html">
+      <Link>Documentation\en\return.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\servoset.html">
+      <Link>Documentation\en\servoset.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\servotrigger.html">
+      <Link>Documentation\en\servotrigger.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\servotriggerstart.html">
+      <Link>Documentation\en\servotriggerstart.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\servotriggerstop.html">
+      <Link>Documentation\en\servotriggerstop.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\setbatteryalarm.html">
+      <Link>Documentation\en\setbatteryalarm.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="..\Documentation\en\setflightplanswitch.html">
+      <Link>Documentation\en\setflightplanswitch.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\setloiterposition.html">
+      <Link>Documentation\en\setloiterposition.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\setmaximumrange.html">
+      <Link>Documentation\en\setmaximumrange.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Documentation\en\until.html">
+      <Link>Documentation\en\until.html</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\models\easystar\easystar.jpg">
+      <Link>Models\Easystar\easystar.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\models\easystar\texture.jpg">
+      <Link>Models\Easystar\texture.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\models\funjet\funjet.jpg">
+      <Link>Models\Funjet\funjet.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\models\funjet\texture.jpg">
+      <Link>Models\Funjet\texture.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\models\mq-9 reaper\Missile01.jpg">
+      <Link>Models\Reaper\Missile01.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\models\mq-9 reaper\Missile02.jpg">
+      <Link>Models\Reaper\Missile02.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\models\mq-9 reaper\Sketchy_Crosshatch_Wavy.jpg">
+      <Link>Models\Reaper\Sketchy_Crosshatch_Wavy.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\models\mq-9 reaper\Texture.jpg">
+      <Link>Models\Reaper\Texture.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="das.ico" />
+    <Content Include="Mobile-Maps.ico" />
+    <Content Include="Resources\marker.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\marker_empty.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\marker_empty_gray.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\marker_empty_red.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\marker_empty_white.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\marker_empty_yellow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\standby.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\surveyimage.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\windvane.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Splash Screen.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
